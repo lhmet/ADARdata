@@ -1,15 +1,17 @@
 Package: ADARdata
-Title: What the Package Does (One Line, Title Case)
+Title: Dados Do Curso Análise De Dados Ambientais Com R (Adar)
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Jônatan",
            family = "Tatsch",
            role = c("aut", "cre"),
            email = "lhmet@ufsm.br")
-Description: What the package does (one paragraph).
+Description: Fornecesse todos os dados para usados no livro ADAR - Análise de Dados Ambientais com R (ADAR).
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+URL: https://github.com/lhmet/ADARdata
+BugReports: https://github.com/lhmet/ADARdata/issues
