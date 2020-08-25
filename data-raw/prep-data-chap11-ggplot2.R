@@ -16,12 +16,8 @@ easypackages::libraries(
 
 # --------------------------------
 # dados recebidos em um link por e-mail a partir de https://bdmep.inmet.gov.br/
-# arq_inmet_bdmep <- "https://www.dropbox.com/s/xr0a78mbfh12usf/dados_83967_H_1910-01-01_2020-07-18.csv?dl=1"
-#arq_bdmep <- "~/Dropbox/datasets/climate_datasets/superficie/inmet/dados_83967_H_1910-01-01_2020-07-18.csv"
-arq_bdmep <-here("../../../..",
-                 "datasets", "climate_datasets", "superficie",
-                 "inmet", "dados_83967_H_1910-01-01_2020-07-18.csv"
-                 )
+# salvos em datasets/superficie/inmet e copiado para extdata
+arq_bdmep <- here("inst/extdata/dados_83936_H_1911-12-31_2020-07-31.csv")
 
 # importar dados
 dados_hist <- rio::import(arq_bdmep,
