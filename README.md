@@ -47,16 +47,16 @@ libraries(pacotes)
 #> Loading required package: knitr
 #> All packages loaded successfully
 # dados disponibilizados
-ds <- data(package = 'ADARdata') %>%
+desc_dados <- data(package = 'ADARdata') %>%
   .$results %>%
   as_tibble() %>% 
   select(dados = Item, descrição = Title) %>%
   kable()
-ds
+desc_dados
 ```
 
-| dados               | descrição                                            |
-| :------------------ | :--------------------------------------------------- |
-| clima\_sm           | Dados meteorológicos diários de Santa Maria-RS       |
-| recordes\_atual\_sm | Recordes de temperatura e precipitação do último ano |
-| tempo\_sm           | Dados meteorológicos do ano atual                    |
+| dados               | descrição                                               |
+| :------------------ | :------------------------------------------------------ |
+| clima\_sm           | Dados e estatísticas diárias do clima de Santa Maria-RS |
+| recordes\_atual\_sm | Recordes de temperatura do último ano                   |
+| tempo\_sm           | Dados meteorológicos do último ano                      |

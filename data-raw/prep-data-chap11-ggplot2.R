@@ -35,6 +35,7 @@ dados_hist <- tibble::as_tibble(dados_hist) %>%
   setNames(., stringi::stri_trans_general(names(.), "latin-ascii")) %>%
   janitor::clean_names()
 
+tail(dados_hist)
 # arrumar nomes
 (nms_orig <- names(dados_hist))
 lut_nms <- c(
@@ -178,7 +179,11 @@ passado
 #------------------------------------------------------------------------------
 # dados atuais: ultimo ano
 atual <- dd_hist %>%
-  dplyr::select(date, tar = tar_med, prec = prec_tot) %>%
+  dplyr::select(
+    date,
+    tar = tar_med#,
+    #prec = prec_tot
+    ) %>%
   dplyr::mutate(dda = lubridate::yday(date)) %>%
   # tira o ano atual
   dplyr::filter(lubridate::year(date) == lubridate::year(lubridate::today()))

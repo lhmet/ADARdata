@@ -41,11 +41,11 @@ pacotes <- c("ADARdata",
              )
 libraries(pacotes)
 # dados disponibilizados
-ds <- data(package = 'ADARdata') %>%
+desc_dados <- data(package = 'ADARdata') %>%
   .$results %>%
   as_tibble() %>% 
   select(dados = Item, descrição = Title) %>%
   kable()
-ds
+desc_dados
 ```
 

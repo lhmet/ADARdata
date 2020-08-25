@@ -3,9 +3,31 @@
 \docType{data}
 \name{clima_sm}
 \alias{clima_sm}
-\title{Dados meteorológicos diários de Santa Maria-RS}
+\title{Dados e estatísticas diárias do clima de Santa Maria-RS}
 \format{
-Todos os dados estão no formato \link[tibble:tibble-package]{tibble}.
+\code{clima_sm} consiste em um \link[tibble:tibble-package]{tibble} com
+20564 linhas e 19 colunas.
+\describe{
+\item{date}{data em formato POSIXct (formato de data e horário no R)}
+\item{tar}{temperatura do ar média diária em °C}
+\item{prec}{precipitação diária acumulada em mm}
+\item{dda}{dia do ano, varia de 1 a 365 (ou 366)}
+\item{tar_max}{temperatura máxima absoluta no \code{dda}}
+\item{tar_min}{temperatura mínima absoluta no \code{dda}}
+\item{tar_med}{temperatura média no \code{dda}}
+\item{tar_valid}{número de observações válidas no \code{dda}}
+\item{tar_se}{erro padrão médio dad \code{tar} para o \code{dda}}
+\item{prec_max}{\code{prec} máxima no \code{dda}}
+\item{prec_min}{\code{prec} mínima no \code{dda}}
+\item{prec_med}{\code{prec} média no \code{dda}}
+\item{prec_valid}{número de observações de \code{prec} válidas no \code{dda}}
+\item{prec_se}{desvio padrão da \code{prec} para o \code{dda}}
+\item{n}{número de anos, limite máximo de \code{tar_valid} e \code{prec_valid}}
+\item{tar_med_max}{é a \eqn{tar_med + 1*tar_se}}
+\item{tar_95}{percentis de 95\% das observações \code{tar} no \code{dda}}
+\item{tar_med_min}{é a \eqn{tar_med - 1*tar_se}}
+\item{tar_05}{percentis de 5\% das observações \code{tar} no \code{dda}}
+}
 }
 \source{
 \url{https://bdmep.inmet.gov.br/}
@@ -14,17 +36,7 @@ Todos os dados estão no formato \link[tibble:tibble-package]{tibble}.
 clima_sm
 }
 \description{
-Conjunto de dados diários de temperatura do ar e precipitação de
-Santa Maria-RS fornecidos pelo INMET
+Contém os dados climáticos e as estatísticas descritivas para cada dia do
+ano da  estação meteorológica do INMET em Santa Maria-RS.
 }
-\section{Dados disponíbilizados}{
-
-Os dados são compostos de 3 quadro de dados:
-\describe{
-\item{clima_sm}{dados históricos diários}
-\item{\link{tempo_sm}}{dados diários do último ano}
-\item{recordes_atual_sm}{recordes dos dados do último ano}
-}
-}
-
 \keyword{datasets}

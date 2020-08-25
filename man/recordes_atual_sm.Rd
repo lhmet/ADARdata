@@ -3,9 +3,20 @@
 \docType{data}
 \name{recordes_atual_sm}
 \alias{recordes_atual_sm}
-\title{Recordes de temperatura e precipitação do último ano}
+\title{Recordes de temperatura do último ano}
 \format{
-\link[tibble:tibble-package]{tibble}.
+\link[tibble:tibble-package]{tibble} com 9 linhas e 8 colunas.
+\describe{
+\item{dda}{dia do ano}
+\item{tar_min}{temperatura mínima absoluta histórica}
+\item{tar_max}{temperatura máxima absoluta histórica}
+\item{date}{data em formato POSIXct}
+\item{tar}{valor da ocorrência do recorde}
+\item{record_max}{um caractere, 'S' ('N') indica que é (não é) um recorde de
+temperatura máxima}
+\item{record_min}{um caractere, 'S' ('N') indica que é (não é) um recorde de
+temperatura mínima}
+}
 }
 \source{
 \url{https://bdmep.inmet.gov.br/}
@@ -14,6 +25,6 @@
 recordes_atual_sm
 }
 \description{
-Recordes de temperatura e precipitação do último ano
+Recordes de temperatura do último ano
 }
 \keyword{datasets}

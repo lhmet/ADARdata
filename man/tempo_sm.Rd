@@ -3,9 +3,16 @@
 \docType{data}
 \name{tempo_sm}
 \alias{tempo_sm}
-\title{Dados meteorológicos do ano atual}
+\title{Dados meteorológicos do último ano}
 \format{
-\link[tibble:tibble-package]{tibble}.
+\code{tempo_sm} consiste em um  \link[tibble:tibble-package]{tibble} com
+201 linhas e 4 colunas.
+\describe{
+\item{date}{data em formato POSIXct (formato de data e horário no R)}
+\item{tar}{temperatura do ar média diária em °C}
+\item{prec}{precipitação diária acumulada em mm}
+\item{dda}{dia do ano, varia de 1 a 365 (ou 366)}
+}
 }
 \source{
 \url{https://bdmep.inmet.gov.br/}
@@ -14,6 +21,7 @@
 tempo_sm
 }
 \description{
-Dados meteorológicos do ano atual
+Dados meteorológicos diários observados no último ano na estação
+meteorológica do INMET em Santa Maria-RS.
 }
 \keyword{datasets}
