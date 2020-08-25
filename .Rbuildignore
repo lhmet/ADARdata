@@ -1,5 +1,5 @@
 ^ADARdata\.Rproj$
 ^\.Rproj\.user$
 ^data-raw$
-^inst/extdata/dados_83967_H_1910-01-01_2020-07-18\.csv$
+^inst/extdata/.+$
 ^LICENSE\.md$
