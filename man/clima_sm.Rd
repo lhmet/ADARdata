@@ -22,7 +22,7 @@ Santa Maria-RS fornecidos pelo INMET
 Os dados são compostos de 3 quadro de dados:
 \describe{
 \item{clima_sm}{dados históricos diários}
-\item{tempo_sm}{dados diários do último ano}
+\item{\link{tempo_sm}}{dados diários do último ano}
 \item{recordes_atual_sm}{recordes dos dados do último ano}
 }
 }
