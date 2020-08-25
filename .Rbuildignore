@@ -3,3 +3,4 @@
 ^data-raw$
 ^inst/extdata/.+$
 ^LICENSE\.md$
+^README\.Rmd$

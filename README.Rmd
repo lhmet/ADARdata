@@ -1,0 +1,51 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# ADARdata
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+O pacote **`{ADARdata}`** contém os dados empregados no livro [ADAR](https://lhmet.github.io/adar-ebook/).
+
+## Instalação
+
+O pacote pode ser instalado a partir do [GitHub](https://github.com/) com:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("lhmet/ADARdata")
+```
+## Lista de dados
+
+A tabela abaixo apresenta os dados disponibilizados com o **`{ADARdata}`**.
+
+```{r example}
+library(easypackages)
+pacotes <- c("ADARdata",
+             "tibble",
+             "dplyr",
+             "knitr"
+             )
+libraries(pacotes)
+# dados disponibilizados
+ds <- data(package = 'ADARdata') %>%
+  .$results %>%
+  tibble::as_tibble() %>% 
+  dplyr::select(dados = Item, descrição = Title) %>%
+  knitr::kable()
+ds
+```
+
