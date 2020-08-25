@@ -7,23 +7,23 @@
 
 <!-- badges: end -->
 
-O pacote **`{ADARdata}`** contém os dados empregados no livro
+O pacote **`{ADARdata}`** contém os dados usados no livro
 [ADAR](https://lhmet.github.io/adar-ebook/).
 
 ## Instalação
 
-O pacote pode ser instalado a partir do [GitHub](https://github.com/)
-com:
+O **`{ADARdata}`** pode ser instalado a partir do
+[GitHub](https://github.com/) com:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("lhmet/ADARdata")
 ```
 
-## Lista de dados
+## Conjunto de dados
 
-A tabela abaixo apresenta os dados disponibilizados com o
-**`{ADARdata}`**.
+Os dados disponibilizados com o **`{ADARdata}`** são descritos na tabela
+abaixo:
 
 ``` r
 library(easypackages)
@@ -49,9 +49,9 @@ libraries(pacotes)
 # dados disponibilizados
 ds <- data(package = 'ADARdata') %>%
   .$results %>%
-  tibble::as_tibble() %>% 
-  dplyr::select(dados = Item, descrição = Title) %>%
-  knitr::kable()
+  as_tibble() %>% 
+  select(dados = Item, descrição = Title) %>%
+  kable()
 ds
 ```
 
